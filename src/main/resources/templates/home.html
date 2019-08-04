@@ -60,12 +60,6 @@
 <main role="main" class="container">
 
     <div class="starter-template">
-        <h2>Wybierz samochód</h2>
-        <form action="/cars" method="post" th:object="${car}">
-            <select class="form-control">
-                <option th:each="car: ${cars}">[[${car}]]</option>
-            </select>
-        </form>
 
         <h2>Dodaj samochód</h2>
 
@@ -82,6 +76,12 @@
                     <input type="submit" class="btn btn-primary btn-lg" value="Dodaj">
                 </div>
             </div>
+        </form>
+        <h2>Wybierz samochód</h2>
+        <form action="/cars" method="post" th:object="${car}">
+            <select class="form-control">
+                <option th:each="car: ${cars}">[[${car}]]</option>
+            </select>
         </form>
     </div>
 

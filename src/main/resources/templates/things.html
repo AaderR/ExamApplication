@@ -62,17 +62,16 @@
     <div class="starter-template">
 
 
-        <h2>rzeczy do zrobienia</h2>
+        <h2>Rzeczy do zrobienia</h2>
         <form action="/things" method="post" th:object="${thingToDo}">
             <input type="hidden" th:field="*{car}">
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Rzeczy do zrobienia</label>
                 <div class="col-sm-10">
                     <input th:field="*{name}" type="text" class="form-control"
-                           placeholder="co do naprawy" required>
+                           placeholder="Wpisz" required>
                 </div>
             </div>
-                <div class="form-group row">
+            <div class="form-group row">
                 <div class="col-sm-10">
                     <input type="submit" class="btn btn-primary btn-lg" value="Dodaj">
                 </div>
