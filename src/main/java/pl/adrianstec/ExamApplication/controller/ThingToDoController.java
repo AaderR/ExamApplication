@@ -14,7 +14,7 @@ public class ThingToDoController {
     @Autowired
     private ThingToDoRepository thingsToDoRepository;
 
-    @PostMapping("/")
+    @PostMapping("/things")
     public String create(@ModelAttribute ThingToDo thingToDo){
         thingsToDoRepository.save(thingToDo);
         return"redirect:/";

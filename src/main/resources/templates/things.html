@@ -59,10 +59,12 @@
 </nav>
 
 <main role="main" class="container">
+    <div class="starter-template">
 
-    <!--    <p th:if="${message}" th:text="${message}" style="color:green;"></p>-->
+
     <h2>rzeczy do zrobienia</h2>
     <form action="/things" method="post" th:object="${thingToDo}">
+        <input type="hidden" th:field="*{car}">
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Rzeczy do zrobienia</label>
             <div class="col-sm-10">
@@ -76,6 +78,7 @@
             </div>
         </div>
     </form>
+    </div>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
