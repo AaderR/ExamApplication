@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Things</title>
+</head>
+<body>
+
+<form action="/cars/things" method="post" th:object="${car}">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Rzeczy do zrobienia</label>
+        <div class="col-sm-10">
+            <input th:field="*{things}" type="text" class="form-control"
+                   placeholder="co do naprawy" required>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="submit" class="btn btn-primary btn-lg" value="Dodaj">
+        </div>
+    </div>
+</form>
+
+
+
+
+</body>
+</html>
