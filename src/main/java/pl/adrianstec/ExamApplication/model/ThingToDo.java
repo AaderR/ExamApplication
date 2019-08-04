@@ -9,7 +9,8 @@ public class ThingToDo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    public ThingToDo(){}
+    public ThingToDo() {
+    }
 
     @OneToOne
     private Car car;
@@ -48,7 +49,7 @@ public class ThingToDo {
         this.car = car;
     }
 
-    public String toString(){
-        return getName()  + " " + isFinish();
+    public String toString() {
+        return getName() + " " + isFinish();
     }
 }
