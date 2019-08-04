@@ -67,7 +67,7 @@ public class Car {
     }
     @Override
     public String toString() {
-        return getCarName()+" "+ getThings();
+        return getCarName();
     }
 
 

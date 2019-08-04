@@ -17,7 +17,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="/starter-template.css" rel="stylesheet">
 </head>
 
 <body>
@@ -59,21 +59,18 @@
 
 <main role="main" class="container">
 
-    <!--    <p th:if="${message}" th:text="${message}" style="color:green;"></p>-->
-
-    <ul class="list-group" th:each="car: ${cars}">
-        <li th:inline="text"
-            class="list-group-item d-flex justify-content-between align-items-center">
-            [[${car}]]
-        </li>
-    </ul>
-
-
     <div class="starter-template">
+        <form action="/cars" method="post" th:object="${car}">
+            <select class="form-control">
+                <option th:each="car: ${cars}">[[${car}]]</option>
+            </select>
+        </form>
 
         <h2>Dodaj samochód</h2>
 
         <form action="/cars" method="post" th:object="${car}">
+
+
             <div class="form-group row">
 
                 <div class="col-sm-10">
