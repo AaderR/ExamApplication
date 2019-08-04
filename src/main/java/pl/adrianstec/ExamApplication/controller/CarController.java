@@ -36,7 +36,7 @@ public class CarController {
 
 
     @GetMapping("/cars/{id}")
-    public String showCars(@PathVariable Integer id, ModelMap map) {
+    public String things(@PathVariable Integer id, ModelMap map) {
         Car car = carRepository.findById(id).get();
         map.put("car", car);
         ThingToDo thingToDo = new ThingToDo();
