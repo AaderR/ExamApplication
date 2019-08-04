@@ -60,6 +60,7 @@
 <main role="main" class="container">
 
     <div class="starter-template">
+        <h2>Wybierz samochód</h2>
         <form action="/cars" method="post" th:object="${car}">
             <select class="form-control">
                 <option th:each="car: ${cars}">[[${car}]]</option>
@@ -69,8 +70,6 @@
         <h2>Dodaj samochód</h2>
 
         <form action="/cars" method="post" th:object="${car}">
-
-
             <div class="form-group row">
 
                 <div class="col-sm-10">
