@@ -81,7 +81,7 @@
         </form>
 
         <form action="/cars" method="post" th:object="${car}" class="col-sm-4">
-            <h2 >Wybierz samochód</h2>
+            <h3 >Wybierz samochód</h3>
             <select class="form-control">
                 <option th:each="car: ${cars}" >[[${car}]]</option>
             </select>
