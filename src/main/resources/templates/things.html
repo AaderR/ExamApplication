@@ -63,6 +63,10 @@
 
 
         <h2>Rzeczy do zrobienia</h2>
+        <form>
+            <label th:text="${show}"></label>
+        </form>
+
         <form action="/things" method="post" th:object="${thingToDo}">
             <input type="hidden" th:field="*{car}">
             <div class="form-group row">
