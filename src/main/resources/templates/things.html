@@ -64,7 +64,7 @@
 
         <h2>Rzeczy do zrobienia</h2>
         <form>
-            <label th:text="${show}"></label>
+            <label th:each="name:${thingToDo}">[[${name}]]</label>
         </form>
 
         <form action="/things" method="post" th:object="${thingToDo}">
