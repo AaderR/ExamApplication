@@ -81,7 +81,7 @@
             <h3>Wybierz samochód</h3>
             <select class="form-control">
                 <option value selected>Wszystkie</option>
-                <option th:each="car: ${cars}" data-target="id">[[${car}]]</option>
+                <option th:each="car: ${cars}" >[[${car}]]</option>
             </select>
             <div class="form-group row">
                 <div class="col-sm-4">
