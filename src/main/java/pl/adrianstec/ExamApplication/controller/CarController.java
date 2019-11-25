@@ -4,13 +4,11 @@ package pl.adrianstec.ExamApplication.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.adrianstec.ExamApplication.model.Car;
 import pl.adrianstec.ExamApplication.repository.CarRepository;
 import pl.adrianstec.ExamApplication.model.ThingToDo;
+import pl.adrianstec.ExamApplication.repository.ThingToDoRepository;
 
 
 @Controller
@@ -44,6 +42,15 @@ public class CarController {
         map.put("thingToDo", thingToDo);
         return "things";
 
+    }
+
+    @RequestMapping("/show/{carName}")
+    public String showThings(@ModelAttribute   Car car ,ThingToDoRepository thingToDoRepository, ModelMap map) {
+        car.getCarName();
+
+        ThingToDo thingToDo = car.getThings();
+        map.put("thingToDo",thingToDo);
+        return "things";
     }
 
 

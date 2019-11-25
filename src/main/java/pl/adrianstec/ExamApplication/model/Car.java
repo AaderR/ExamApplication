@@ -27,6 +27,10 @@ public class Car {
     @OneToMany(mappedBy = "car")
     private List<ThingToDo> things = new ArrayList<>();
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getOwner() {
         return owner;
     }
