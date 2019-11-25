@@ -77,11 +77,11 @@
 
 
 
-        <form class="col-sm-4" action="/show/{carName}" method="get" th:object="${car}" th:field="${car}">
+        <form class="col-sm-4" action="/show" method="get" th:object="${things}">
             <h3>Wybierz samochód</h3>
-            <select class="form-control" >
+            <select class="form-control">
                 <option value selected>Wszystkie</option>
-                <option  th:each="car: ${cars}">[[${car}]]</option>
+                <option th:each="car: ${cars}" data-target="id">[[${car}]]</option>
             </select>
             <div class="form-group row">
                 <div class="col-sm-4">
