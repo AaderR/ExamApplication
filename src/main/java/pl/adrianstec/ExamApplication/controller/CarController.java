@@ -44,12 +44,12 @@ public class CarController {
 
     }
 
-    @RequestMapping("/show/{carName}")
-    public String showThings(@ModelAttribute   Car car ,ThingToDoRepository thingToDoRepository, ModelMap map) {
-        car.getCarName();
+    @RequestMapping("/show")
+    public String showThings(@ModelAttribute("car")   Car car ,ThingToDoRepository thingToDoRepository, ModelMap map) {
 
-        ThingToDo thingToDo = car.getThings();
-        map.put("thingToDo",thingToDo);
+
+        car.getThings();
+        map.put("thingToDo",car);
         return "things";
     }
 
